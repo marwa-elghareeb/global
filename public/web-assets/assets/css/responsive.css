@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* Layout: Large Devices. */
+@media only screen and (min-width: 1010px) {
+
+}
+
+@media only screen and (max-width: 1670px) {
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-header .main-menu ul li a
+    {
+        font-size: 13px !important;
+    }
+    .border-btn {
+        padding: 12px 25px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* Layout: Large Devices. */
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1399px) {
+}
+/* Layout: Large Devices. */
+@media only screen and (max-width: 1348px) {
+}
+/* Layout: Large Devices. */
+@media only screen and (max-width: 1000px) {
+
+   
+}
+
+/* Tablet Layout: 991px. */
+@media only screen and (max-width: 992px)  {
+    .logo
+    {
+        display: block;
+        text-align: left;
+    }
+    .section-title h2
+    {
+        font-size: 20px;
+    }
+    .wantToWork-caption img
+    {
+        margin-bottom: 15px;
+    }
+    .footer-bottom-area .footer-copy-right p
+    {
+        font-size: 14px;
+    }
+    .footer-social a
+    {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1249px) {
+
+}
+
+/* Tablet Layout: 1199px. */
+@media only screen and (max-width: 1199px) {
+
+}
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Small Device : 590px. */
+@media only screen and (max-width: 576px) {
+    .main-slider-part .hero__caption h2 ,.main-slider-part .hero__caption h2 span {
+        font-size: 40px;
+
+    }
+    .main-slider-part .hero__caption h2.lastchild {
+        font-size: 25px;
+    }
+    .main-slider-part .hero__caption p {
+        font-size: 19px;
+        line-height: 35px;
+    }
+    .hero-btn
+    {
+        font-size: 24px;
+    }
+    
+.team-head-text {
+    line-height: 66px;
+}
+}
+/* Small Device : 480px. */
+@media only screen and (max-width: 480px) {
+}
+
+@media only screen and (max-width: 370px) {
+
+}
+
+@media only screen and (max-width: 280px) {
+}
+
+/* Extra Small Device : 420px. */
+@media only screen and (max-width: 1230px) {
+}
+
+/* Extra Small Device : 320px. */
+@media only screen and (max-width: 789px) {
+  
+}
+
+@media only screen and (max-width: 1413px) {
+}
+@media (max-width: 992px) {
+
+}
