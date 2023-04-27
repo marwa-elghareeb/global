@@ -47,7 +47,7 @@
             <div class="d-flex align-items-center">
                 <a href="{{ URL :: to ('/')}}">
                     <!--{{ URL ::to ('public/upload/'.$settingData->image)}} -->
-                    <img class="w-100" src="{{ asset('public/portal/img/logo1.png')}}" 
+                    <img class="w-100" src="{{ URL ::to ('public/upload/'.$settingData->image)}}" 
                     alt="Image" style="height: 50px;">
                 </a>
                 <div class="ms-auto d-flex align-items-center">
@@ -80,9 +80,10 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="{{ URL :: to ('/')}}" class="nav-item nav-link active">الرئيسية</a>
-                        <a href="#" class="nav-item nav-link">من نحن </a>
-                        <a href="#" class="nav-item nav-link">خدماتنا</a>
-                        <a href="#" class="nav-item nav-link">مشاريعنا</a>
+                        <a href="#about" class="nav-item nav-link">من نحن </a>
+                        <a href="#services" class="nav-item nav-link">خدماتنا</a>
+                        <a href="#projects" class="nav-item nav-link">مشاريعنا</a>
+                        <a href="#contact" class="nav-item nav-link">تواصل معنا</a>
                         <!--  <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">تصفح</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0"> 
@@ -93,11 +94,11 @@
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>-->
-                        <a href="#" class="nav-item nav-link">تواصل معنا</a>
+                        
                     </div>
-                    <!--div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">انشاء حساب</a>
-                    </div-->
+                    <div class="ms-auto d-none d-lg-block">
+                        <a href="" class="btn btn-primary rounded-pill py-2 px-3"> المكاتب الافتراضيه</a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -181,14 +182,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('public/portal/lib/wow/wow.min.js'})}"></script>
-    <script src="{{ asset('public/portal/lib/easing/easing.min.js'})}"></script>
-    <script src="{{ asset('public/portal/lib/waypoints/waypoints.min.js'})}"></script>
-    <script src="{{ asset('public/portal/lib/owlcarousel/owl.carousel.min.js'})}"></script>
-    <script src="{{ asset('public/portal/lib/lightbox/js/lightbox.min.js'})}"></script>
+    <script src="{{ asset('public/portal/lib/wow/wow.min.js')}}"></script>
+    <script src="{{ asset('public/portal/lib/easing/easing.min.js')}}"></script>
+    <script src="{{ asset('public/portal/lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{ asset('public/portal/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('public/portal/lib/lightbox/js/lightbox.min.js')}}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{ asset('public/portal/js/main.js'})}"></script>
+    <script src="{{ asset('public/portal/js/main.js')}}"></script>
 </body>
 
 </html>

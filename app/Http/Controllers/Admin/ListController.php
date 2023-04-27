@@ -1,15 +1,16 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\role;
+use App\Models\Categories;
+use App\Models\Pages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
-class RoleController extends Controller
+class ListController extends Controller
 {
-  
+
     /**
      * Display a listing of the resource.
      *
@@ -17,8 +18,10 @@ class RoleController extends Controller
      */
     public function index()
     {
-         $allData = role::all();
-        return view('admin.role.list')->with(['allData' => $allData]);
+        //
+        $allData = Categories::all();
+    
+        return view('admin.category.list')->with('allData', $allData);
     }
 
     /**
@@ -29,7 +32,8 @@ class RoleController extends Controller
     public function create()
     {
         //
-        return view('admin.role.create');
+        $allData = Categories::all();
+        return view('admin.category.create')->with('allData', $allData);
     }
 
     /**
@@ -40,22 +44,22 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
-          //validation
-          $request->validate([
-            //'parent_id' => 'required',
-            'name_ar' => 'required|max:255',
-            'name_en' => 'required|max:255',
-      
-        
-        ]);
-             //Store
-             $data = new role();
-             $data->name_ar = $request->name_ar;
-             $data->name_en = $request->name_en;
-             $data->save();
-             return redirect()->route('role.index');
+        //validation
+        $request->validate([
+            'name_ar' => 'required|unique:categories|max:255',
+            // 'name_en' => 'required|max:255',
 
+        ]);
+
+        //Store
+        $data = new Categories();
+
+        $data->name_ar = $request->name_ar;
+        $data->name_en = $request->name_en;
+        $data->parent_id = $request->parent_id;
+        $data->save();
+
+        return redirect()->route('list.index');
     }
 
     /**
@@ -66,7 +70,7 @@ class RoleController extends Controller
      */
     public function show($id)
     {
-        //
+    
     }
 
     /**
@@ -77,10 +81,11 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
+
         //
-        $editData = role::where('id', $id)->first();
-        return view('admin.role.edit')->with(['editData' => $editData]);
-      
+        $allData = Categories::all();
+        $editData = Categories::where('id', $id)->first();
+        return view('admin.category.edit')->with(['allData' => $allData, 'editData' => $editData]);
     }
 
     /**
@@ -92,23 +97,23 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-         //validation
-         $request->validate([
+
+        //validation
+        $request->validate([
             'name_ar' => 'required|max:255',
-            'name_en' => 'required|max:255',
-         
-        
+            // 'name_en' => 'required|max:255',
+
         ]);
-           //Update
-           $data = role::find($id);
 
-           $data->name_ar = $request->name_ar;
-           $data->name_en = $request->name_en;
-        
-           $data->save();
-           return redirect()->route('role.index');
+        //Update
+        $data = Categories::find($id);
 
+        $data->name_ar = $request->name_ar;
+        $data->name_en = $request->name_en;
+        $data->parent_id = $request->parent_id;
+        $data->save();
+    
+        return redirect()->route('list.index');
     }
 
     /**
@@ -120,8 +125,8 @@ class RoleController extends Controller
     public function destroy($id)
     {
 
-        role::destroy($id);
-        return redirect()->route('role.index')->with('flash_message', 'Item deleted!');
+        $data = Categories::find($id);
+        return redirect()->route('list.index')->with('flash_message', 'Item deleted!');
 
     }
 }

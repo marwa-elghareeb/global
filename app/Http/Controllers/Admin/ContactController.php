@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\ActivityLog;
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
-class ActivityController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class ActivityController extends Controller
     public function index()
     {
         //
-        $allData = ActivityLog::orderBy('id','desc')->get();
-        return view('admin.activityLog.list')->with('allData', $allData);
+        $allData = Contact::all();
+        return view('admin.contact.list')->with(['allData' => $allData]);
     }
 
     /**
@@ -27,7 +27,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -37,8 +37,9 @@ class ActivityController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
     {
-        //
+
     }
 
     /**
@@ -60,7 +61,7 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -72,8 +73,10 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -83,6 +86,7 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        //
+              
     }
 }
+

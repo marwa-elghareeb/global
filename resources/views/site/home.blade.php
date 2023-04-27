@@ -54,7 +54,7 @@
 
 
 <!-- Features Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="about">
     <div class="container">
         <div class="row g-0 feature-row">
 
@@ -174,26 +174,64 @@
 
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="services">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-medium text-primary">خدماتنا</p>
-            <h3 class="display-5 mb-5"> خدمات  الشركه</h3>
+            <h3 class="display-5 mb-5"> خدمات الشركه</h3>
         </div>
         <div class="row g-4">
 
 
-           
-            
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item position-relative h-100">
                     <div class="service-text rounded p-5">
                         <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
                             <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
                         </div>
-                        <h5 class="mb-3">          خدمات  التوظيف عن بعد   </h5>
-                            <p class="mb-0">
+                        <h5 class="mb-3"> خدمات التوظيف عن بعد </h5>
+                        <p class="mb-0">
                             من أكبر التحديات التي تواجه الشركات في حال طلب موظفين بنظام العمل عن بُعد هو عملية الاختيار والتعيين
+                        </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-5.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3"> الخدمات المالية والإدارية </h5>
+                        <p class="mb-0">
+                            تقدم شركة الأنظمة الشاملة باقة مميزة من الخدمات المالية ( تسجيل القيود والمعاملات اليومية – الحسابات العامة - المراجعة المالية – إعداد القوائم المالية السنوية
+                        </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-6.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3"> خدمات الاستشارات المالية والإدارية </h4>
+                            <p class="mb-0">
+                                مهما كانت المشكلة معقدة فمن خلال نخبة من مستشارين الأعمال لدينا تستطيع شركة الأنظمة الشاملة الوقوف على المشكلة
                             </p>
                     </div>
                     <div class="service-btn rounded-0 rounded-bottom">
@@ -203,16 +241,17 @@
             </div>
 
 
-            
+
+
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item position-relative h-100">
                     <div class="service-text rounded p-5">
                         <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-7.png')}}" alt="Icon">
                         </div>
-                        <h5 class="mb-3">   الخدمات المالية والإدارية </h5>
+                        <h5 class="mb-3"> خدمات التسويق الإلكتروني </h4>
                             <p class="mb-0">
-                            تقدم شركة الأنظمة الشاملة باقة مميزة من الخدمات المالية 
+                                تقدم شركة الأنظمة الشاملة خدمة مميزة من خلال باقات التسويق الإلكتروني على جميع برامج التواصل الاجتماعي
                             </p>
                     </div>
                     <div class="service-btn rounded-0 rounded-bottom">
@@ -222,15 +261,16 @@
             </div>
 
 
-            
+
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item position-relative h-100">
                     <div class="service-text rounded p-5">
                         <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-8.png')}}" alt="Icon">
                         </div>
-                        <h5 class="mb-3">     خدمات الاستشارات المالية والإدارية  </h4>
+                        <h5 class="mb-3"> خدمات التسويق الهاتفي </h4>
                             <p class="mb-0">
+                                تقدم شركة الأنظمة الشاملة خدمات التسويق الهاتفي وبلغات متعددة وفقاً لمتطلبات العميل
                             </p>
                     </div>
                     <div class="service-btn rounded-0 rounded-bottom">
@@ -240,53 +280,17 @@
             </div>
 
 
-            
-            
+
+
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item position-relative h-100">
                     <div class="service-text rounded p-5">
                         <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-9.png')}}" alt="Icon">
                         </div>
-                        <h5 class="mb-3">        خدمات التسويق الإلكتروني  </h4>
+                        <h5 class="mb-3"> خدمات مركز الاتصالات </h4>
                             <p class="mb-0">
-                            </p>
-                    </div>
-                    <div class="service-btn rounded-0 rounded-bottom">
-                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            
-            
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item position-relative h-100">
-                    <div class="service-text rounded p-5">
-                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
-                        </div>
-                        <h5 class="mb-3">          خدمات التسويق الهاتفي  </h4>
-                            <p class="mb-0">
-                            </p>
-                    </div>
-                    <div class="service-btn rounded-0 rounded-bottom">
-                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-
-
-            
-            
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item position-relative h-100">
-                    <div class="service-text rounded p-5">
-                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
-                        </div>
-                        <h5 class="mb-3">          خدمات مركز الاتصالات   </h4>
-                            <p class="mb-0">
+                                تقدم شركة الأنظمة الشاملة أفضل التقنيات لخدمات مركز الاتصال call center
                             </p>
                     </div>
                     <div class="service-btn rounded-0 rounded-bottom">
@@ -304,44 +308,41 @@
 
 
 <!-- Project Start -->
-<!--div class="container-xxl pt-5">
+<div class="container-xxl pt-5" id="projects">
     <div class="container">
 
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-medium text-primary">مشاريعنا</p>
-            <h1 class="display-5 mb-5">لقد أنجزنا الكثير من المشاريع الرائعة</h1>
+            <h3 class="display-5 mb-5">مشاريعنا المميزه</h3>
         </div>
         <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
 
-
-            @foreach($ProjectsData as $data)
             <div class="project-item mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="{{ URL ::to ('public/upload/'.$data->image)}}" alt="">
+                    <img class="img-fluid" src="{{ asset('public/portal/img/s1.png')}}" alt="">
                     <div class="project-overlay">
-                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ URL ::to ('public/upload/'.$data->image)}}" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-1.jpg" data-lightbox="project"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i class="fa fa-link"></i></a>
                     </div>
                 </div>
                 <div class="p-4">
-                    <a class="d-block h5" href="#"> {{ $data->name_ar}}</a>
-                    <span>{{$data->desc_ar}}</span>
+                    <a class="d-block h5" href="#">  مشروع1</a>
+                    <span>تفاصيل المشروع</span>
                 </div>
             </div>
 
-            @endforeach
 
         </div>
     </div>
-</div-->
+</div>
 <!-- Project End -->
 <!-- Quote Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="contact">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <p class="fs-5 fw-medium text-primary">المساعدة</p>
-                <h1 class="display-5 mb-4">هل تحتاج اذا مساعدة خبيرنا ؟ </h1>
+                <h5 class="display-5 mb-4">هل تحتاج الى الاستفسار عن منتجاتنا ؟ </h5>
 
                 <p>نمتلك فريق تسويقي مبدع، ونستخدم أنسب الاستراتيجيات التسويقية لكل حدث، بجانب أحدث الوسائل والتقنيات العالمية للاتصال بالشرائح المستهدفة؛ وذلك بتطبيق حزمة من الإجراءات التسويقية المترابطة التي تحقق الوصول الكامل للمستهدفات، ومزيداً من الزخم الإعلامي لفعاليات أعمالنا.</p>
                 <p class="mb-4">نمتلك فريق تسويقي مبدع، ونستخدم أنسب الاستراتيجيات التسويقية لكل حدث، بجانب أحدث الوسائل والتقنيات العالمية للاتصال بالشرائح المستهدفة؛ وذلك بتطبيق حزمة من الإجراءات التسويقية المترابطة التي تحقق الوصول الكامل للمستهدفات، ومزيداً من الزخم الإعلامي لفعاليات أعمالنا.</p>
@@ -349,7 +350,7 @@
                     <span class="btn-lg-square bg-primary" style="width: 55px; height: 55px;">
                         <i class="fa fa-phone-alt text-white"></i>
                     </span>
-                    <span class="fs-5 fw-medium mx-4">{{$settingData->phone}}</span>
+                    <span class="fs-5 fw-medium mx-4">00000</span>
                 </a>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">

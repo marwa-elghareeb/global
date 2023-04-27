@@ -3,10 +3,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Cards;
-use Illuminate\Support\Str;
+use App\Models\Projects;
+use App\Models\Categories;
 
-class CardsController extends Controller
+class ProjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class CardsController extends Controller
     public function index()
     {
         //
-        $allData = Cards::all();
-        return view('admin.cards.list')->with(['allData' => $allData]);
+        $allData = Projects::all();
+        return view('admin.project.list')->with(['allData' => $allData]);
     }
 
     /**
@@ -28,7 +28,8 @@ class CardsController extends Controller
     public function create()
     {
         //
-        return view('admin.cards.create');
+        $allCat = Categories::all();
+        return view('admin.project.create')->with(['allData' => $allCat]);;
     }
 
     /**
@@ -42,15 +43,13 @@ class CardsController extends Controller
         //
         $request->validate([
             'name_ar' => 'required',
-            'name_en' => 'required',
-            'link' => 'required',
-            'image' => 'required',
             'desc_ar' => 'required',
-            'desc_en' => 'required',
-        
+            'image' => 'mimes:jpeg,png,jpg,gif',
+           
         ]);
         //Store
-        $data = new Cards();
+        $data = new Projects();
+        $data->category_id = $request->category_id;
         $data->name_ar = $request->name_ar;
         $data->name_en = $request->name_en;
         $data->link = $request->link;
@@ -62,9 +61,8 @@ class CardsController extends Controller
         $data->image = $filename;
         $data->desc_ar = $request->desc_ar;
         $data->desc_en = $request->desc_en;
-        $data->slug = Str::slug($request->name_ar);
         $data->save();
-        return redirect()->route('cards-data.index');
+        return redirect()->route('all-projects.index');
     }
 
     /**
@@ -87,8 +85,9 @@ class CardsController extends Controller
     public function edit($id)
     {
         //
-        $editData = Cards::where('id', $id)->first();
-        return view('admin.cards.edit')->with(['editData' => $editData]);
+        $editData = Projects::where('id', $id)->first();
+        $allCat = Categories::all();
+        return view('admin.project.edit')->with(['editData' => $editData , 'allData' => $allCat]);
     }
 
     /**
@@ -103,23 +102,22 @@ class CardsController extends Controller
         //
         $request->validate([
             'name_ar' => 'required|max:255',
-            'name_en' => 'required|max:255',
+    
             'image' => 'mimes:jpeg,png,jpg,gif',
-            'link'=>'required',
+           
             'desc_ar' => 'required',
-            'desc_en' => 'required',
+           
          
         
         ]);
              //Update
-             $data = Cards::find($id);
-
+             $data = Projects::find($id);
+             $data->category_id = $request->category_id;
              $data->name_ar = $request->name_ar;
              $data->name_en = $request->name_en;
              $data->desc_ar = $request->desc_ar;
              $data->desc_en = $request->desc_en;
              $data->link = $request->link;
-             $data->slug = Str::slug($request->name_ar);
      
              if($request->file('image')){
                 $file= $request->file('image');
@@ -131,7 +129,7 @@ class CardsController extends Controller
                $data->image = '';
            }
            $data->save();
-             return redirect()->route('cards-data.index');
+             return redirect()->route('all-projects.index');
     }
 
     /**
@@ -144,8 +142,8 @@ class CardsController extends Controller
     {
         //
         
-        Cards::destroy($id);
-        return redirect()->route('cards-data.index')->with('flash_message', 'Item deleted!');
+        Projects::destroy($id);
+        return redirect()->route('all-projects.index')->with('flash_message', 'Item deleted!');
 
     }
 }

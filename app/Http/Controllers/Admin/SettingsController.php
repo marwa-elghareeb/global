@@ -25,8 +25,7 @@ class SettingsController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.Settings.create');
+       
     }
 
     /**
@@ -37,43 +36,7 @@ class SettingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-          //validation
-          $request->validate([
-            //'parent_id' => 'required',
-            'title_ar' => 'required|max:255',
-            'title_en' => 'required|max:255',
-            'desc_ar' => 'required',
-            'desc_en' => 'required',
-            'facebook' => 'required|max:255',
-            'twitter' => 'required|max:255',
-            'instagram' => 'required|max:255',
-            'youtube' => 'required|max:255',
-            'image' => 'mimes:jpeg,png,jpg,gif'
         
-        ]);
-             //Store
-             $data = new Settings();
-             $data->title_ar = $request->title_ar;
-             $data->title_en = $request->title_en;
-             $data->desc_ar = $request->desc_ar;
-             $data->desc_en = $request->desc_en;
-             $data->facebook = $request->facebook;
-             $data->twitter = $request->twitter;
-             $data->instagram = $request->instagram;
-             $data->youtube= $request->youtube;
-
-             if($request->file('image')){
-                 $file= $request->file('image');
-                 $filename= date('YmdHi').$file->getClientOriginalName();
-                 $file-> move(public_path('upload'), $filename);
-                // $data['image']= $filename;
-                $data->image = $filename;
-             }else{
-                 $data->image = '';
-             }
-             $data->save();
-             return redirect()->route('settings.index');
 
     }
 
@@ -114,19 +77,20 @@ class SettingsController extends Controller
         //
          //validation
          $request->validate([
-            'title_ar' => 'required|max:255',
-            'title_en' => 'required|max:255',
-            'desc_ar' => 'required',
-            'desc_en' => 'required',
-            'facebook' => 'required|max:255',
-            'twitter' => 'required|max:255',
-            'instagram' => 'required|max:255',
-            'youtube' => 'required|max:255',
+            'phone' => 'required|max:255',
+            'email' => 'required|max:255',
             'image' => 'mimes:jpeg,png,jpg,gif'
         
         ]);
            //Update
            $data = Settings::find($id);
+           $data->phone = $request->phone;
+           $data->email = $request->email;
+           $data->map_link = $request->map_link;
+           $data->address_ar = $request->address_ar;
+           $data->address_en = $request->address_en;
+           $data->linkedin = $request->linkedin;
+
            $data->title_ar = $request->title_ar;
            $data->title_en = $request->title_en;
            $data->desc_ar = $request->desc_ar;
@@ -157,8 +121,7 @@ class SettingsController extends Controller
     public function destroy($id)
     {
 
-        Settings::destroy($id);
-        return redirect()->route('settings.index')->with('flash_message', 'Item deleted!');
+    
 
     }
 }

@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>لوحه التحكم</title>
+    <title>لوحه التحكم - الرئيسيه</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="#">
-    <link href="{{ asset('public/admin/css/style.css')}}" rel="stylesheet">
-    <link href="{{ asset('public/admin//assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('public/admin//assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('public/admin//assets/plugins/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('public/admin//assets/plugins/nestable2/css/jquery.nestable.min.css')}}" rel="stylesheet">
+
+    <link href="{{ asset('public/admin/assets/bootstrap/css/bootstrap.rtl.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/admin/assets/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/admin/css/style_ar.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/admin/assets/plugins/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+
+    <!--link href="{{ asset('public/admin/assets/plugins/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/admin/assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/admin/assets/plugins/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/admin/assets/plugins/nestable2/css/jquery.nestable.min.css')}}" rel="stylesheet">
+-->
+   
     <script>
         function myFunction() {
 
@@ -29,7 +36,7 @@
 
 </head>
 
-<body>
+<body >
 
     <!--*******************
         Preloader start
@@ -57,7 +64,8 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="#">
-                <b><img src="{{ asset('public/portal/img/logo1.png')}}" alt=""> </b><span class="brand-title"><img src="../../assets/images/logo-text.png" alt=""></span></a>
+                <b><!--img src="{{ asset('public/admin//assets/images/logo.png')}}" alt=""--> 
+            </b><span class="brand-title"><img src="../../assets/images/logo-text.png" alt=""></span></a>
             </div>
             <div class="nav-control">
                 <div class="hamburger"><span class="line"></span> <span class="line"></span> <span class="line"></span>
@@ -132,95 +140,65 @@
                 <ul class="metismenu" id="menu">
 
                     <li class="mega-menu mega-menu-lg">
-                        <a class="has-arrow" href="{{ route('home') }}" aria-expanded="false" style="width: max-content;cursor: pointer;">
-                            <i class="mdi mdi-view-dashboard"></i><span class="nav-text">Dashboard</span>
+                        <a class="has-arrow" href="#" aria-expanded="false"
+                         style="width: max-content;cursor: pointer;">
+                            <i class="mdi mdi-view-dashboard">
+
+                            </i><span class="nav-text">الرئيسيه</span>
                         </a>
-
-                    </li>
-
-                    <li><a class="has-arrow" href="javascript:void()" 
-                    aria-expanded="false"><i class="mdi mdi-view-list"></i> 
-                    <span class="nav-text">Help Center</span> </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('list.index') }}">Categories</a>
-                            </li>
-                            <li><a href="{{ route('pages.index') }}">Pages</a>
-                            </li>
-                            <li><a href="{{ route('faq.index') }}">FAQ</a>
-                            </li>
-                        </ul>
-                    </li>
-
-        
-                    <li><a class="has-arrow" href="javascript:void()" 
-                    aria-expanded="false"><i class="mdi mdi-page-layout-body"></i> 
-                    <span class="nav-text">Tower</span> </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('companies.index') }}">Companies</a>
-                            </li>
-                            <li><a href="{{ route('departments.index') }}">Departments</a>
-                            </li>
-                            <li><a href="{{ route('employees.index') }}">Employees</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li><a class="has-arrow" href="javascript:void()" 
-                    aria-expanded="false"><i class="mdi mdi-television-guide"></i> 
-                    <span class="nav-text">Website Data</span> </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('about-data.index') }}">About US</a>
-                            </li>
-                            <li><a href="{{ route('media-data.index') }}">Media</a>
-                            </li>
-                            <li><a href="{{ route('news-data.index') }}">News</a>
-                            </li>
-                            <li><a href="{{ route('contact-data.index') }}">Contact Us</a>
-                            </li>
-                            <li><a href="{{ route('footer-pages-data.index') }}">Footer Pages</a>
-                            </li>
-
-                        </ul>
-                    </li>
-
-                   
-
-                    <li><a class="has-arrow" href="javascript:void()" 
-                    aria-expanded="false"><i class="mdi mdi-ticket"></i> 
-                    <span class="nav-text">Main</span> </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ route('registrationandlogin-data.index') }}">User website</a>
-                            </li>
-                            <li><a href="{{ route('cards-data.index') }}">Cards</a>
-                            </li>
-                            
-                        </ul>
-                    </li>
-
-
-                    <li><a class="has-arrow" href="javascript:void()" 
-                    aria-expanded="false"><i class="mdi mdi-chart-bar"></i> 
-                    <span class="nav-text">Users & Roles</span> </a>
-                        <ul aria-expanded="false">
-                        <li><a href="{{ route('role.index') }}">role</a>
-                            </li>
-                            <li><a href="#"></a>
-                            </li>
-                            
-                        </ul>
                     </li>
             
-                    <li class="mega-menu mega-menu-lg">
-                        <a class="has-arrow" href="{{ route('activitylog.index') }}" aria-expanded="false" style="width: max-content;cursor: pointer;">
-                            <i class="fa fa-list"></i><span class="nav-text">Activity</span>
-                        </a>
-                     
-                    </li>
+                   
                     <li><a class="has-arrow" href="{{ route('settings.index') }}"
-                    aria-expanded="false"><i class="mdi mdi-chart-bar"></i> 
-                    <span class="nav-text">Settings</span> </a>
+                    aria-expanded="false"><i class="fa fa-gear"></i> 
+                    <span class="nav-text">الاعدادات</span> </a>
                      
                     </li>
+
+                    <!--li><a class="has-arrow" href="{{ route('sliders.index') }}"
+                    aria-expanded="false"><i class="fa fa-photo"></i> 
+                    <span class="nav-text">البانر</span> </a>
+                     
+                    </li-->
+
+                    <li><a class="has-arrow" href="{{ route('about-us.index') }}"
+                    aria-expanded="false"><i class="mdi mdi-message-draw"></i> 
+                    <span class="nav-text">من نحن</span> </a>
+                     
+                    </li>
+
+                    <li><a class="has-arrow" href="{{ route('all-services.index') }}"
+                    aria-expanded="false"><i class="fa fa-diamond"></i> 
+                    <span class="nav-text">الخدمات</span> </a>
+                     
+                    </li>
+
+
+                    <li><a class="has-arrow" href="{{ route('list.index') }}"
+                    aria-expanded="false"><i class="fa fa-list"></i> 
+                    <span class="nav-text">فئات المشاريع </span> </a>
+                     
+                    </li>
+
+                    <li><a class="has-arrow" href="{{ route('all-projects.index') }}"
+                    aria-expanded="false"><i class="fa fa-star"></i> 
+                    <span class="nav-text">المشاريع</span> </a>
+                     
+                    </li>
+
+
+                    <li><a class="has-arrow" href="{{ route('faq.index') }}"
+                    aria-expanded="false"><i class="fa fa-question"></i> 
+                    <span class="nav-text">الاسئله الشائعه</span> </a>
+                     
+                    </li>
+
+                    <li><a class="has-arrow" href="{{ route('contact-data.index') }}"
+                    aria-expanded="false"><i class="fa fa-envelope"></i> 
+                    <span class="nav-text">رسائل تواصل معانا </span> </a>
+                     
+                    </li>
+
 
 
 
@@ -246,7 +224,11 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright &copy; Designed by <a href="#">Jehat</a>, Developed by <a href="#">Jehat Team</a> 2022</p>
+                <p>جميع الحقوق محفوظه &copy; صمم بواسطه 
+                    <a href="#">
+                        
+                    </a>, تم تطويره <a href="#">
+                         تيم</a> 2023</p>
             </div>
         </div>
         <!--**********************************
@@ -271,7 +253,9 @@
     ***********************************-->
     <script src="{{ asset('public/admin//assets/plugins/common/common.min.js')}}"></script>
     <script src="{{ asset('public/admin//js/custom.min.js')}}"></script>
-    <script src="{{ asset('public/admin//js/settings.js')}}"></script>
+    <!--script src="{{ asset('public/admin//js/settings.js')}}"></script-->
+    <script src="{{ asset('public/admin/js/settings_ar.js')}}"></script>
+
     <script src="{{ asset('public/admin//js/gleek.js')}}"></script>
     <script src="{{ asset('public/admin//js/styleSwitcher.js')}}"></script>
 
