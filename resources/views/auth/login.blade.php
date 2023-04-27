@@ -13,7 +13,7 @@
                     
                         <div class="logo-2">
                             <a href="{{ URL :: to ('/homepage')}}">
-                                <img src="{{ asset('public/login-style/assets/img/logos/logo-2.png')}}" alt="logo">
+                                <img src="{{ asset('public/portal/img/logo1.png')}}" alt="logo">
                             </a>
                         </div>
                         <h3>قم بإدخال بيانات الدخول الخاصة بحسابك</h3>

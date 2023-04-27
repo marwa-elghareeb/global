@@ -45,24 +45,9 @@ use App\Http\Controllers\TeleworksController;
 |
 */
 
-//Test Controllers 
-Route::get('/teleworks', [TeleworksController::class, 'index']);
-Route::get('/api', [TeleworksController::class, 'api']);
-
 //Portal Routes:
-Route::get('/', function () {
-    return view('site.homePages');
-   });
+Route::get('/', function () { return view('site.homePages');});
    
-
-Route::post('/contactUsForm', [ContactUsSiteController::class, 'contactUsForm']);
-Route::get('/news-details/{id}', [NewsSiteController::class, 'newsDetails']);
-//Help Center
-Route::post('/search', [IndexController::class, 'search']);
-
-//Caption
-Route::get('/reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha']);
-
 //Admin
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/login', [AdminAuthController::class, 'getLogin'])->name('adminLogin');
@@ -93,63 +78,3 @@ Route::group(['prefix' => 'admin'], function () {
     });
 });
 
-
-//User
-Auth::routes();
-//Route::group(['middleware' => ['auth']], function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/allCompanies/{slug}', [TowerSiteController::class, 'companies']);
-    Route::get('/reception/{slug}', [TowerSiteController::class, 'reception']);
-    Route::get('/department/{slug}', [TowerSiteController::class, 'department']);
-    Route::get('/employe/{id}', [TowerSiteController::class, 'employees']);
-    Route::post('/searchEmp', [TowerSiteController::class, 'searchEmp']);
-
-//});
-
-//Language
-
-
-Route::group(['prefix' => '{locale}','where' => ['locale' => '[a-z]{2}'],
-'middleware' => 'setLocale'],
- function () {
-    Route::get('/homepage', function () {
-        return view('site.homePages');
-       })->name('/homepage');
-    Route::get('/homepage', function () {
-    return view('site.homePages');
-   })->name('/homepage');
-    Route::get('/aboutUs', [AboutUsSiteController::class, 'index'])->name('/aboutUs');
-    Route::get('/contactUs', [ContactUsSiteController::class, 'index'])->name('/contactUs');
-    Route::get('/media', [MediaSiteController::class, 'index'])->name('/media');
-    Route::get('/news', [NewsSiteController::class, 'index'])->name('/news');
-//Help Centers
-    Route::get('/helpcenter', [IndexController::class, 'help'])->name('/helpcenter');
-    Route::get('/question', [IndexController::class, 'question'])->name('/question');
-    Route::post('/search', [IndexController::class, 'search'])->name('/search');
-    Route::get('/cards', [TowerSiteController::class, 'cards'])->name('/cards');
-    Route::get('/allCompanies', [TowerSiteController::class, 'companies'])->name('/allCompanies');
-    Route::get('/department/{slug}', [TowerSiteController::class, 'department']);
-    Route::get('/footerPages/{slug}', [FooterSiteController::class, 'index']);
-    Route::get('/helpcenter/{id}', [IndexController::class, 'helpDetails']);
-    Route::get('/ourTeam', [IndexController::class, 'ourTeam'])->name('/ourTeam');
-    Route::get('/news-details/{id}', [NewsSiteController::class, 'newsDetails']);
-
-});
-
-
-
-//Towers
-
-/*
-Route::get('/cards', TowerSiteController::class, 'cards');
-Route::get('/towers', [TowerSiteController::class, 'towers']);
-Route::get('/allCompanies', [TowerSiteController::class, 'companies']);
-Route::get('/reception/{slug}', [TowerSiteController::class, 'reception']);
-Route::get('/userLogin/{slug}', [TowerSiteController::class, 'userLogin']);
-Route::post('/userLoginForm', [TowerSiteController::class, 'userLoginForm']);
-Route::get('/department/{slug}', [TowerSiteController::class, 'department']);
-Route::get('/employe/{id}', [TowerSiteController::class, 'employees']);
-Route::post('/searchEmp', [TowerSiteController::class, 'searchEmp']);
-//Events
-Route::get('/allEvents', [TowerSiteController::class, 'events']);
-Route::get('/employeesEvent/{id}', [TowerSiteController::class, 'employeesEvent']);*/

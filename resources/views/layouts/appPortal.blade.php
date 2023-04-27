@@ -1,334 +1,194 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> جهات</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="" href="">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/web-assets/img/favicon.png')}}">
+    <title>شركة الانظمة الشاملة</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <!-- CSS here -->
-    <link rel="preconnect" href="https://fonts.gstatic.com ">
-    <!--old-bootstrap-->
-    <link rel="stylesheet" href="web-assets/css/bootstrap.min.css">
-    <!--Bootstrap v5.3-->
-    <link rel="stylesheet" href="{{ asset('public/web-assets/assets/css/bootstrap.rtl.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets//css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/progressbar_barfiller.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/gijgo.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/animated-headline.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/magnific-popup.css')}} ">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/fontawesome-all.min.css')}} ">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/themify-icons.css')}} ">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/slick.css')}} ">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/nice-select.css')}} ">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/css/style.css')}} ">
+    <!-- Favicon -->
+    <link href="{{ asset('public/portal/img/favicon.ico')}}" rel="icon">
 
-    <!--New Style-->
-    <link rel="stylesheet" href="{{ asset('public/web-assets/assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/web-assets/assets/css/responsive.css')}}">
-   
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('public/portal/lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/portal/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/portal/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('public/portal/css/bootstrap.rtl.min.css')}}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ asset('public/portal/css/style.css')}}" rel="stylesheet">
 </head>
 
-<body dir="rtl">
-    <!-- ? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src=" {{ asset('public/web-assets/img/logo/loder.png')}}" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
+<body>
+    <!-- Spinner Start -->
+    <!--div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div-->
+    <!-- Spinner End -->
 
 
-    <header>
-        <!-- Header Start -->
-        <div class="header-area header-transparent">
-            <div class="main-header ">
-                <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-sm-12 my-0">
-                                <div class="logo">
-                                    <a href="{{ URL :: to ('/')}}">
-                                        <img src="{{ asset('public/web-assets/img/logo/logo.png')}}" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10 col-sm-0 my-0">
-                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
-                                    <!-- Main-menu -->
-                                    <div class="main-menu d-none d-lg-block">
-                                        <nav>
-                                            <ul id="navigation">
-
-                                                <li><a @if(Request::segment(1) == '') class="active"  @endif
-                                                href=" {{ route('/homepage', app()->getLocale()) }} ">@lang('site.Homepage') </a></li>
-                                                <li><a @if(Request::segment(1) == 'aboutUs') class="active"  @endif 
-                                                href="{{ route('/aboutUs', app()->getLocale()) }} ">@lang('site.aboutUs')</a></li>
-                                                <li><a @if(Request::segment(1) == 'contactUs') class="active"  @endif 
-                                                href="{{ route('/contactUs', app()->getLocale()) }} ">@lang('site.contactUs') </a></li>
-                                                <li><a @if(Request::segment(1) == 'helpcenter' || 
-                                                Request::segment(1) == 'media' ||
-                                                Request::segment(1) == 'question') class="active"  @endif 
-                                                href="#"> @lang('site.UserManual')</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="{{ route('/helpcenter', app()->getLocale()) }} ">@lang('site.HelpCenter')</a></li>
-                                                        <li><a href=" {{ route('/media', app()->getLocale()) }} ">@lang('site.MediaCenter')</a></li>
-                                                        <li><a href=" {{ route('/question', app()->getLocale()) }}"> @lang('site.question')  </a></li>
-                                                    </ul>
-                                                <li><a @if(Request::segment(1) == 'cards') class="active" @endif 
-                                                href=" {{ route('/cards', app()->getLocale()) }}">@lang('site.virtual_towers')  </a></li>
-                                                <li><a @if(Request::segment(1) == 'news') class="active" @endif 
-                                                href="{{ route('/news', app()->getLocale()) }}">@lang('site.news')  </a></li>
-                                               
-                                               <div class=" nav-item dropdown">
-                                               <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    {{ app()-> getLocale()=='ar'?'عربي':'English'}}
-                                               </a>
-
-                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                  <a class="dropdown-item"  href="{{url(app()->getLocale()=='ar'?'en':'ar')}}">{{ app()-> getLocale()=='ar'?'English':'عربي'}}</a>
-                                                </div>
-                                               </div>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                   
-                                    
-                                    <div class="header-right-btn d-none d-lg-block ml-65">
-                                    @guest
-                                        <a href="https://app.jehat.sa/client_login.aspx" class="border-btn">@lang('site.signin') </a>
-                                            @else
-                                            {{ Auth::user()->name }}
-                                            @endguest
-                                            <!--a href="#">
-                                                     <i class="fa fa-language" aria-hidden="true"></i></a-->
-                                    </div>
-                                  
-                                </div>
-                            </div>
-
-                            <!-- Mobile Menu -->
-                            <div class="col-12 col-sm-6">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary text-white d-none d-lg-flex">
+        <div class="container py-3">
+            <div class="d-flex align-items-center">
+                <a href="{{ URL :: to ('/')}}">
+                    <!--{{ URL ::to ('public/upload/'.$settingData->image)}} -->
+                    <img class="w-100" src="{{ asset('public/portal/img/logo1.png')}}" 
+                    alt="Image" style="height: 50px;">
+                </a>
+                <div class="ms-auto d-flex align-items-center">
+                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>  {{ $settingData->address_ar}}  </small>
+                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>{{ $settingData->email}}</small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>{{ $settingData->phone}}</small>
+                    <div class="ms-3 d-flex">
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="{{ $settingData->facebook}}"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="{{ $settingData->twitter}}"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href="{{ $settingData->linkedin}}"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Header End 
-        
-                     
-    -->
-    </header>
-    <!-- header end -->
+    </div>
+    <!-- Topbar End -->
 
 
-
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+                <a href="{{ URL :: to ('/')}}" class="navbar-brand d-lg-none">
+                    <h1 class="fw-bold m-0">شركه الانظمه الشامله</h1>
+                </a>
+                <button type="button" class="navbar-toggler me-0" 
+                data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="{{ URL :: to ('/')}}" class="nav-item nav-link active">الرئيسية</a>
+                        <a href="#" class="nav-item nav-link">من نحن </a>
+                        <a href="#" class="nav-item nav-link">خدماتنا</a>
+                        <a href="#" class="nav-item nav-link">مشاريعنا</a>
+                        <!--  <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">تصفح</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0"> 
+                                <a href="feature.html" class="dropdown-item">رؤيتنا</a>
+                                <a href="team.html" class="dropdown-item">فريق العمل</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="quote.html" class="dropdown-item">Quotation</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>-->
+                        <a href="#" class="nav-item nav-link">تواصل معنا</a>
+                    </div>
+                    <!--div class="ms-auto d-none d-lg-block">
+                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">انشاء حساب</a>
+                    </div-->
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
 
     @yield('content')
 
 
 
-    <!--? Want To work 01-->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">عنوان التواصل</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3">
 
-    <section class="wantToWork-area ">
-        <div class="container">
-            <div class="wants-wrapper w-padding2 section-bg2" data-background=" {{ asset('public/web-assets/img/gallery/backgapps.png')}}">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xl-7 col-lg-9 col-md-8">
-                        <div class="wantToWork-caption text-center">
-                            <h2>@lang('site.des_Footer')</h2>
-                            <p>@lang('site.des_Footer_1')</p>
-                            <a href="https://apps.apple.com/eg/app/jehat/id1600983802">
-                                <img src="{{ asset('public/web-assets/img/gallery/nmn.png')}}" alt=""></a>
-                            <a href="https://play.google.com/store/apps/">
-                                <img src=" {{ asset('public/web-assets/img/gallery/mmm.png')}}" alt=""></a>
-                        </div>
+                    </i>  {{ $settingData->address_ar}} </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i> {{ $settingData->phone}} </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i> {{ $settingData->email}} </p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $settingData->twitter}}"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $settingData->facebook}}"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $settingData->youtube}}"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $settingData->linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">روابط سريعة</h4>
+
+                    @foreach(  $footerPages as $data)
+                    <a class="btn btn-link" href="#"> {{  $data->name_ar}} </a>
+                    @endforeach
+                  
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">ساعات العمل </h4>
+                    <p class="mb-1">الخميس - الاحد</p>
+                    <h6 class="text-light">م 04:00 - 08:00 ص</h6>
+                    <p class="mb-1">الجمعة</p>
+                    <h6 class="text-light">مغلق</h6>
+                    <p class="mb-1">السبت</p>
+                    <h6 class="text-light"> م04:00 - ص 11:00 </h6>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">اشترك معنا</h4>
+                    <p>تفضل بالإشتراك ليصلك كل ماهو جديد</p>
+                    <div class="position-relative w-100">
+                        <input required class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                         type="text" placeholder="البريد الالكتروني">
+                        <button type="button" 
+                        class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">اشتراك</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Want To work End -->
-
-    <footer>
-        <div class="footer-wrappper section-bg">
-            <!-- Footer Start-->
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="single-footer-caption mb-30">
-                                    <!-- logo -->
-                                    <div class="footer-logo mb-25">
-                                        <a href="#"><img src="{{ asset('public/web-assets/img/logo/logo2_footer.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="footer-tittle">
-                                        <div class="footer-tittle text-center">
-                                            <p> @lang('site.des_Footer_2')</p>
-                                        </div>
-                                    </div>
-                                    <!-- social -->
-                                    <div class="footer-social">
-                                        <a target="_blank" href="https://twitter.com/jehat_Platform"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100084844831017"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://www.linkedin.com/in/jehat-platform-729a5025b/"><i class="fab fa-linkedin"></i></a>
-                                        <a target="_blank" href="https://www.instagram.com/invites/contact/?i=an5lcynrcsp3&utm_content=n0t065o"><i class="fab fa-instagram"></i></a>
-                                        <a target="_blank" href="https://www.youtube.com/channel/UCfwE7stMZzQlurXJN2eQvIQ"><i class="fab fa-youtube"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>@lang('site.des_Footer_3')</h4>
-                                    <ul>
-                                        <li><a href="{{ route('/aboutUs', app()->getLocale()) }} "> @lang('site.aboutUs')</a></li>
-                                        <li><a href="{{ route('/ourTeam', app()->getLocale()) }}"> @lang('site.ourTeam')</a></li>
-                                
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4> @lang('site.Links')  </h4>
-                                    <ul>
-                                    @foreach($footerPages as $data)
-                                        <li><a href="{{URL :: to ('/footerPages',$data->slug )}}">  {{ $data->name_ar}}</a></li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>@lang('site.contactUs') </h4>
-                                    <ul>
-                                        <li><a href="#">@lang('site.technical_support')</a></li>
-                                        <li><a href="mailto:info@jehat.sa" target="_blank">info@jehat.sa</a></li>
-                                        <li><a href="https://wa.me/966553777769?text=" target="_blank">+966553777769</a></li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- footer-bottom area -->
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12 ">
-                                <div class="footer-copy-right text-center">
-                                    <p>
-
-                                    @lang('site.des_Footer_4')&copy; 2023
-
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End-->
-        </div>
-    </footer>
-
-    <!-- Scroll Up -->
-    <div id="back-top">
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
+    <!-- Footer End -->
 
-    <!-- JS here -->
-    
-    <script src="{{ asset('public/web-assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="{{ asset('public/web-assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/popper.min.js')}}"></script>
-    <!--old bootstrap-->
-    <!--<script src="web-assets/js/bootstrap.min.js"></script>-->
-    <!--new-bootstarp-->
-    <script src="{{ asset('public/web-assets/assets/js/bootstrap.min.js')}}"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="{{ asset('public/web-assets/js/jquery.slicknav.min.js')}}"></script>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="{{ asset('public/web-assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/slick.min.js')}}"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="{{ asset('public/web-assets/js/wow.min.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/animated.headline.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/jquery.magnific-popup.js')}} "></script>
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-medium text-light" href="#"> 
+                        جميع الحقوق محفوظة لشركة الأنظمة الشاملة </a>
+                </div>
 
-    <!-- Date Picker -->
-    <script src=" {{ asset('public/web-assets/js/gijgo.min.js')}} "></script>
-    <!-- Nice-select, sticky -->
-    <script src=" {{ asset('public/web-assets/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/jquery.sticky.js')}}"></script>
-    <!-- Progress -->
-    <script src="{{ asset('public/web-assets/js/jquery.barfiller.js')}}"></script>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
 
-    <!-- counter , waypoint,Hover Direction -->
-    <script src="{{ asset('public/web-assets/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/waypoints.min.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/jquery.countdown.min.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/hover-direction-snake.min.js')}}"></script>
 
-    <!-- contact js -->
-    <script src="{{ asset('public/web-assets/js/contact.js')}}"></script>
-    <script src="{{ asset('public/web-assets/js/jquery.form.js')}}  "></script>
-    <script src="{{ asset('public/web-assets/js/jquery.validate.min.js')}}"></script>
-    <script src=" {{ asset('public/web-assets/js/mail-script.js')}} "></script>
-    <script src="{{ asset('public/web-assets/js/jquery.ajaxchimp.min.js')}}"></script>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="{{ asset('public/web-assets/js/plugins.js')}} "></script>
-    <script src="{{ asset('public/web-assets/js/main.js')}} "></script>
 
-    <script>
-        // Owl Carousal
-        $("#owl-slider").owlCarousel({
-            items: 1,
-            nav: false,
-            dots: true,
-            rtl: true,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 6000,
-            responsive: {
-                0: {
-                    items: 1
-                }
-            }
-        });
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('public/portal/lib/wow/wow.min.js'})}"></script>
+    <script src="{{ asset('public/portal/lib/easing/easing.min.js'})}"></script>
+    <script src="{{ asset('public/portal/lib/waypoints/waypoints.min.js'})}"></script>
+    <script src="{{ asset('public/portal/lib/owlcarousel/owl.carousel.min.js'})}"></script>
+    <script src="{{ asset('public/portal/lib/lightbox/js/lightbox.min.js'})}"></script>
 
-    
+    <!-- Template Javascript -->
+    <script src="{{ asset('public/portal/js/main.js'})}"></script>
 </body>
 
 </html>

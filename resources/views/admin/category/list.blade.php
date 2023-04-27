@@ -28,12 +28,12 @@
             <div class="col-lg-12">
                 <div class="card button-card">
                     <div class="card-body">
-                        <a href="{{ route('list.create') }}" type="button" class="btn btn-rounded btn-info" style="float: right;">
+                        <a href="{{ route('list.create') }}" type="button" class="btn btn-rounded btn-info" style="float: left;">
                             <span class="btn-icon-left text-info"><i class="fa fa-plus color-info"></i> </span>Add</a>
 
-                            <a href="{{ route('list.show' , 1) }}" type="button" class="btn btn-rounded btn-secondary" style="float: right;">
+                            <!--a href="{{ route('list.show' , 1) }}" type="button" class="btn btn-rounded btn-secondary" style="float: right;">
                             <span class="btn-icon-left text-info">
-                                <i class="fa fa-list color-secondary"></i> </span>show</a>
+                                <i class="fa fa-list color-secondary"></i> </span>show</a-->
                     </div>
                 </div>
             </div>

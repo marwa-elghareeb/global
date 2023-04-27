@@ -10,34 +10,31 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <div class="col p-md-0">
-                <h4>Aboutus </h4>
+                <h4>من نحن </h4>
             </div>
             <div class="col p-md-0">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('about-data.index') }}">list</a>
+                    <li class="breadcrumb-item"><a href="{{ route('about-us.index') }}">من نحن</a>
                     </li>
-                    <li class="breadcrumb-item active">Show list</li>
+                    <li class="breadcrumb-item active">من نحن </li>
                 </ol>
             </div>
         </div>
 
-
-
-
-        <div class="row">
+        <!--div class="row">
             <div class="col-lg-12">
                 <div class="card button-card">
                     <div class="card-body">
-                        <a href="{{ route('about-data.create') }}" 
-                        type="button" class="btn btn-rounded btn-info" style="float: right;">
+                        <a href="{{ route('about-us.create') }}" 
+                        type="button" class="btn btn-rounded btn-info" style="float: left;">
                             <span class="btn-icon-left text-info">
-                                <i class="fa fa-plus color-info"></i> </span>Add</a>
+                                <i class="fa fa-plus color-info"></i> </span>اضافه</a>
 
 
                     </div>
                 </div>
             </div>
-        </div>
+        </div-->
 
         <div class="content-wrapper">
             @if(Session::has('flash_message'))
@@ -54,11 +51,11 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name (Ar)</th>
-                                        <th>Name (En)</th>
+                                        <th>الاسم (Ar)</th>
+                                        <th>الاسم (En)</th>
                                 
-                                        <th>Edit</th>
-                                        <th>Delete</th>
+                                        <th>تعديل</th>
+                                        <th>حذف</th>
 
                                     </tr>
                                 </thead>
@@ -74,13 +71,13 @@
                                     
 
                                         <td>
-                                            <a href="{{ route('about-data.edit', $data->id ) }}" type="button" class="btn btn-rounded btn-secondary">
+                                            <a href="{{ route('about-us.edit', $data->id ) }}" type="button" class="btn btn-rounded btn-secondary">
                                                 <i class="fa fa-pencil color-secondary"></i> </a>
                                         </td>
 
                                         <td>
 
-                                            <form method="POST" action="{{route('about-data.destroy', $data->id) }}">
+                                            <form method="POST" action="{{route('about-us.destroy', $data->id) }}">
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-rounded btn-danger">
                                                     <i class="fa fa-close color-danger"></i></button>
@@ -98,13 +95,12 @@
 
                                 <tfoot>
                                     <tr>
-                                        <th>#</th>
-                                        <th>Name (Ar)</th>
-                                        <th>Name (En)</th>
-                                       
-                                        <th>Edit</th>
-                                        <th>Delete</th>
-
+                                    <th>#</th>
+                                        <th>الاسم (Ar)</th>
+                                        <th>الاسم (En)</th>
+                                
+                                        <th>تعديل</th>
+                                        <th>حذف</th>
                                     </tr>
                                 </tfoot>
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jehat</title>
+    <title>لوحه التحكم</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="#">
     <link href="{{ asset('public/admin/css/style.css')}}" rel="stylesheet">
@@ -57,7 +57,7 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="#">
-                <b><img src="{{ asset('public/admin//assets/images/logo.png')}}" alt=""> </b><span class="brand-title"><img src="../../assets/images/logo-text.png" alt=""></span></a>
+                <b><img src="{{ asset('public/portal/img/logo1.png')}}" alt=""> </b><span class="brand-title"><img src="../../assets/images/logo-text.png" alt=""></span></a>
             </div>
             <div class="nav-control">
                 <div class="hamburger"><span class="line"></span> <span class="line"></span> <span class="line"></span>

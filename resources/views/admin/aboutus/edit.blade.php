@@ -9,7 +9,7 @@
             </div>
             <div class="col p-md-0">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('about-data.index') }}">aboutus</a>
+                    <li class="breadcrumb-item"><a href="{{ route('about-us.index') }}">aboutus</a>
                     </li>
 
                     <li class="breadcrumb-item active">Edit 
@@ -28,7 +28,7 @@
                         <h4 class="card-title mb-4">Edit Item</h4>
                         <div class="basic-form">
                             <form role="form" enctype="multipart/form-data" method="post" 
-                            action="{{ route('about-data.update' , $editData->id) }}">
+                            action="{{ route('about-us.update' , $editData->id) }}">
                                 {{ csrf_field() }}
                                 {{ method_field('PATCH') }}
 
@@ -130,7 +130,7 @@
 
                                 <div style="float: right;">
                                     <button type="submit" class="btn btn-primary btn-form">Submit</button>
-                                    <button type="reset"  class="btn btn-light btn-form"><a href="{{ route('about-data.index') }}">Cancel</a></button>
+                                    <button type="reset"  class="btn btn-light btn-form"><a href="{{ route('about-us.index') }}">Cancel</a></button>
                                 </div>
                             </form>
                         </div>

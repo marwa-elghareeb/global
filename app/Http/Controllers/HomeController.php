@@ -27,14 +27,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+       /* $users = User::all();
         $categories = Categories::all();
         $pages = Pages::all();
         
         $allData = Cards::all(['id', 'title_' . $locale,'desc_' . $locale,'name_' . $locale,'address_' . $locale,'question_' . $locale,'answer_' . $locale,]);
 
         return view('home')->with(['userCount'=> count($users) , 
-        'catCount'=> count($categories) , 'pagesCount'=> count($pages) ,'allData' => $allData]);
+        'catCount'=> count($categories) , 'pagesCount'=> count($pages) ,'allData' => $allData]);*/
     }
    
 }

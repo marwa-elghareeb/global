@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>منصه جهات - تسجيل الدخول</title>
+    <title> لوحه التحكم - تسجيل الدخول</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/web-assets/img/favicon.png')}}">
     <!-- Custom Stylesheet -->

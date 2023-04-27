@@ -23,22 +23,6 @@
 
 
 
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card button-card">
-                    <div class="card-body">
-                        <a href="{{ route('contact-data.create') }}"
-                        type="button" class="btn btn-rounded btn-info" style="float: right;">
-                            <span class="btn-icon-left text-info">
-                                <i class="fa fa-plus color-info"></i> </span>Add</a>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="content-wrapper">
             @if(Session::has('flash_message'))
             <p class="alert alert-info">{{ Session::get('flash_message') }}</p>

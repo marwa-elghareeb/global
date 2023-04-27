@@ -33,7 +33,7 @@
                             <form role="form" id="myForm" enctype="multipart/form-data" method="post" action="{{ route('faq.store') }}">
                                 {{ csrf_field() }}
 
-                                <div class="form-group row align-items-center">
+                                <!--div class="form-group row align-items-center">
                                     <label class="col-sm-3 col-form-label text-label">Category Name </label>
                                     <div class="col-lg-9">
                                         <select class="form-control" name="category_id">
@@ -44,7 +44,7 @@
 
                                         </select>
                                     </div>
-                                </div>
+                                </div-->
 
                                 <div class="form-group row align-items-center">
                                     <label class="col-sm-3 col-form-label text-label"> Question (Ar)</label>
@@ -107,9 +107,9 @@
 
 
 
-                                <div style="float: right;">
+                                <div>
                                     <button type="submit" class="btn btn-primary btn-form">Submit</button>
-                                    <button type="reset"  class="btn btn-light btn-form"><a href="{{ route('faq.index') }}">Cancel</a></button>
+                                    <button type="reset" class="btn btn-light btn-form">Cancel</button>
                                 </div>
                             </form>
                         </div>

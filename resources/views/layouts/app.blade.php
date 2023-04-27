@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -21,7 +20,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-TAGCODE');
     </script>
     <!-- End Google Tag Manager -->
-    <title> منصه جهات  </title>
+    <title> لوحه التحكم - تسجيل الدخول </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <!-- External CSS libraries -->
@@ -30,7 +29,7 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('public/login-style/assets/fonts/flaticon/font/flaticon.css')}}">
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="{{ asset('public/web-assets/img/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('public/portal/img/favicon.ico')}}" type="image/x-icon">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +50,7 @@
 
         }
     </style>
-  <script>
+    <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
@@ -83,10 +82,10 @@
 
         }
 
-     
+
 
         function validateEnglish() {
-            var isEnglish= /^[a-zA-Z'\)\(.-]+$/g;
+            var isEnglish = /^[a-zA-Z'\)\(.-]+$/g;
 
             if (isEnglish.test($.trim($('#english').val()))) {
                 //alert("يقبل الايميل  فقط");
@@ -105,7 +104,8 @@
 
 <body id="top">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TAGCODE" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TAGCODE" 
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="page_loader"></div>
 
@@ -113,14 +113,14 @@
     @yield('content')
 
 
-    
+
     <!-- External JS libraries -->
     <script src="{{ asset('public/login-style/assets/js/jquery-2.2.0.min.js')}}"></script>
     <script src="{{ asset('public/login-style/assets/js/popper.min.js')}}"></script>
     <script src="{{ asset('public/login-style/assets/js/bootstrap.min.js')}}"></script>
     <!-- Custom JS Script -->
-     <!-- Custom JS Script for caption on register -->
-     <script type="text/javascript">
+    <!-- Custom JS Script for caption on register -->
+    <script type="text/javascript">
         $('#reload').click(function() {
             $.ajax({
                 type: 'GET',

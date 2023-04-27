@@ -10,13 +10,13 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <div class="col p-md-0">
-                <h4>Settings</h4>
+                <h4>الاعدادات</h4>
             </div>
             <div class="col p-md-0">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('settings.index') }}">list</a>
+                    <li class="breadcrumb-item"><a href="{{ route('settings.index') }}">الاعدادات</a>
                     </li>
-                    <li class="breadcrumb-item active">Show list</li>
+                    <li class="breadcrumb-item active">عرض الاعدادات </li>
                 </ol>
             </div>
         </div>
@@ -24,7 +24,7 @@
 
 
 
-        <div class="row">
+        <!--div class="row">
             <div class="col-lg-12">
                 <div class="card button-card">
                     <div class="card-body">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div-->
 
         <div class="content-wrapper">
             @if(Session::has('flash_message'))
@@ -54,11 +54,9 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>title (Ar)</th>
-                                        <th>desc_ar</th>
-                                
-                                        <th>Edit</th>
-                                        <th>Delete</th>
+                                        <th>اسم الموقع</th>
+                                        <th>تعديل</th>
+                                       
 
                                     </tr>
                                 </thead>
@@ -68,28 +66,15 @@
                                     @foreach($allData as $data)
                                     <tr>
                                         <th>{{ $i ++ }}</th>
-                                        <td>{{ $data->title_ar }}</td>
-                                        <td>{{ $data->desc_ar }}</td>
-
-                                    
+                                        <td>سابقه الحديث للزجاج و الألومنيوم  </td>
+                            
 
                                         <td>
                                             <a href="{{ route('settings.edit', $data->id ) }}" type="button" class="btn btn-rounded btn-secondary">
                                                 <i class="fa fa-pencil color-secondary"></i> </a>
                                         </td>
 
-                                        <td>
-
-                                            <form method="POST" action="{{route('settings.destroy', $data->id) }}">
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-rounded btn-danger">
-                                                    <i class="fa fa-close color-danger"></i></button>
-                                                @csrf
-                                            </form>
-
-
-
-                                        </td>
+                                        
 
                                     </tr>
 
@@ -99,11 +84,10 @@
                                 <tfoot>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name (Ar)</th>
-                                        <th>Name (En)</th>
+                                        <th>اسم الموقع</th>
+                                        <th>تعديل</th>
                                        
-                                        <th>Edit</th>
-                                        <th>Delete</th>
+                                       
 
                                     </tr>
                                 </tfoot>

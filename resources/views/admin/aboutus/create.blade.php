@@ -10,7 +10,7 @@
             </div>
             <div class="col p-md-0">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('about-data.index') }}">Aboutus</a>
+                    <li class="breadcrumb-item"><a href="{{ route('about-us.index') }}">Aboutus</a>
                     </li>
 
                     <li class="breadcrumb-item active">Add 
@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <h4 class="card-title mb-4">Add New </h4>
                         <div class="basic-form">
-                            <form role="form" enctype="multipart/form-data" method="post" action="{{ route('about-data.store') }}">
+                            <form role="form" enctype="multipart/form-data" method="post" action="{{ route('about-us.store') }}">
                                 {{ csrf_field() }}
 
 
@@ -61,7 +61,7 @@
                                     <label class="col-sm-3 col-form-label text-label">Title (Ar)</label>
                                     <div class="col-sm-9">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" name="title_ar" onkeyup="myFunction()" id="fname" id="validationDefaultUsername1" aria-describedby="validationDefaultUsername1">
+                                            <input type="text" class="form-control" name="title_ar"  id="fname" id="validationDefaultUsername1" aria-describedby="validationDefaultUsername1">
                                         </div>
                                         @if($errors->has('title_ar'))
                                         <div class="error">{{ $errors->first('title_ar') }}</div>
@@ -84,7 +84,7 @@
                                     <label class="col-sm-3 col-form-label text-label">Description (Ar)</label>
                                     <div class="col-sm-9">
                                         <div class="input-group">
-                                            <textarea  class="form-control" id="ck_editor" name="desc_ar" rows="6"></textarea>
+                                            <textarea  class="form-control"  name="desc_ar" rows="6"></textarea>
                                         </div>
                                         @if($errors->has('desc_ar'))
                                         <div class="error">{{ $errors->first('desc_ar') }}</div>
@@ -96,7 +96,7 @@
                                     <label class="col-sm-3 col-form-label text-label">Description (En)</label>
                                     <div class="col-sm-9">
                                         <div class="input-group">
-                                            <textarea  class="form-control"  id="ck_editor" name="desc_en" rows="6"></textarea>
+                                            <textarea  class="form-control"  name="desc_en" rows="6"></textarea>
                                         </div>
                                         @if($errors->has('desc_en'))
                                         <div class="error">{{ $errors->first('desc_en') }}</div>
@@ -121,7 +121,7 @@
 
                                 <div style="float: right;">
                                     <button type="submit" class="btn btn-primary btn-form">Submit</button>
-                                    <button type="reset"  class="btn btn-light btn-form"><a href="{{ route('about-data.index') }}">Cancel</a></button>
+                                    <button type="reset"  class="btn btn-light btn-form"><a href="{{ route('about-us.index') }}">Cancel</a></button>
 
                                 </div>
                             </form>

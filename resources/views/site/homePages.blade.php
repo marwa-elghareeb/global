@@ -1,296 +1,511 @@
 @extends('layouts.appPortal')
 @section('content')
 
-
-<!-- Owl Carousal
- -->
-<div class="main-slider-part owl-slider" id="owl-slider">
-  <!-- slide 01 -->
-  <div class="slide">
-    <div class="owl-slide h-100 background-image-filter" style="background-image: url('public/web-assets/img/hero/test1.JPEG');">
-      <div class="owl-text text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-11 col-md-12">
-              <div class="hero__caption text-center">
-                <h2 data-animation="bounceIn" data-delay="0.2s">@lang('site.platform')
-                  <span>@lang('site.jehat')</span>
-                </h2>
-                <h2 class="lastchild" data-animation="bounceIn" data-delay="0.2s">@lang('site.des') </h2>
-                <p data-animation="fadeInUp" data-delay="0.4s">
-
-                @lang('site.des_1')
-
-                </p>
-
-                <a href="{{ URL :: to ('/register')}}" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">
-               @lang('site.jehat_platform')
-                </a>
-              </div>
+<!-- Carousel Start -->
+<div class="container-fluid px-0 mb-5">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{{ asset('public/portal/img/s4banner.jpg')}}" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 text-center">
+                                <p class="fs-4 text-white animated slideInRight">اهلا بك في
+                                    <strong>شركة الأنظمة الشاملة</strong>
+                                </p>
+                                <h1 class="display-5 text-white mb-4 animated slideInRight">شركة الأنظمة الشاملة إحدى الشركات الرائدة سريعة النمو .
+                                </h1>
+                                <a href="{{ URL :: to ('/')}}" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">المزيد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- slide 02 -->
-  <div class="slide">
-    <div class="owl-slide h-100 background-image-filter" style="background-image: url('public/web-assets/img/hero/test2.JPEG') ; ">
-      <div class="owl-text text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-11 col-md-12">
-              <div class="hero__caption text-center">
-              <h2 data-animation="bounceIn" data-delay="0.2s">@lang('site.platform')
-                  <span>@lang('site.jehat')</span>
-                </h2>
-                <h2 class="lastchild" data-animation="bounceIn" data-delay="0.2s">  @lang('site.des') </h2>
-                <p data-animation="fadeInUp" data-delay="0.4s">
-
-                @lang('site.des_1')
-
-                </p>
-
-                <a href="{{ URL :: to ('/register')}}" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">منصة
-                  جهات
-                </a>
-              </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{{ asset('public/portal/img/s4banner.jpg')}}" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 text-center">
+                                <p class="fs-4 text-white animated slideInLeft"> اهلا بك في <strong> شركة الأنظمة الشاملة </strong>
+                                </p>
+                                <h1 class="display-5 text-white mb-4 animated slideInLeft">مع شركة الأنظمة الشاملة اوجدنا للاعمال حلول</h1>
+                                <a href="{{ URL :: to ('/')}}" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">
+                                    المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-  </div>
-  <!-- slide 03 -->
-  <div class="slide">
-    <div class="owl-slide h-100 background-image-filter" style="background-image: url('public/web-assets/img/hero/test3.JPEG');">
-      <div class="owl-text text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-11 col-md-12">
-              <div class="hero__caption text-center">
-              <h2 data-animation="bounceIn" data-delay="0.2s">@lang('site.platform')
-                  <span>@lang('site.jehat')</span>
-                </h2>
-                <h2 class="lastchild" data-animation="bounceIn" data-delay="0.2s">  @lang('site.des') </h2>
-
-                <p data-animation="fadeInUp" data-delay="0.4s">
-
-                @lang('site.des_1')
-
-                </p>
-
-                <a href="{{ URL :: to ('/register')}}" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">منصة
-                  جهات
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-<div class="bg-contain-sections section-padding40">
-  <!-- Services Section -->
-  <!--section id="services" class="services pb-80">
+<!-- Carousel End -->
+
+
+<!-- Features Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-0 feature-row">
+
+
+            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="feature-item border h-100 p-5">
+                    <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                        <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-1.png')}}" alt="Icon">
+                    </div>
+                    <h5 class="mb-3"> رسالتنا</h5>
+                    <p class="mb-0"> أننا لسنا مجرد شركة بالشكل التقليدي لكننا شركاء عمل نتبادل مع عملائنا الأفكار والخبرات، نكرس جهودنا وإمكانياتنا لتحقيق أهدافنا، نسعى دائماً إلى التطوير والتحديث في طريقة أداء عملنا، نجتهد ونتفانى ونؤمن أن العمل الجاد المخلص هو السبيل لتحقيق النجاح.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="feature-item border h-100 p-5">
+                    <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                        <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-5.png')}}" alt="Icon">
+                    </div>
+                    <h5 class="mb-3"> رؤيةالشركة</h5>
+                    <p class="mb-0"> نسعى في شركة الأنظمة الشاملة أن تكون الشركة رائدة في مجال تطوير وتنفيذ حلول الأعمال من خلال تقديم أعلى مستويات الخدمة والأداء والأمن، وأن نضاهي كبرى الشركات العالمية.
+                    </p>
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="feature-item border h-100 p-5">
+                    <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                        <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-4.png')}}" alt="Icon">
+                    </div>
+                    <h5 class="mb-3"> أهدافنا</h5>
+                    <p class="mb-0">أن نكون من مصاف الشركات الرائدة في إدارة وتطوير حلول الأعمال للشركات عن طريق استغلال وتنظيم وإدارة الثروة البشرية الهائلة التي تتمتع بها الدول العربية من الخريجين والكوادر البشرية المتميزة في جميع الأصعدة والمجالات، .
+                    </p>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+<!-- About Start -->
+<div class="container-xxl about my-5">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-6">
+                <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
+                    <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="bg-white rounded-top p-5 mt-lg-5">
+                    <p class="fs-5 fw-medium text-primary">من نحن</p>
+                    <h1 class="display-6 mb-4"> إحدى الشركات الرائدة سريعة النمو </h1>
+                    <p class="mb-4"> في ظل الثورة التكنولوجية التي يشهدها العالم حالياً وما تواجهه الدول والمجتمعات من تحديات وكذلك ما فرضته المستجدات على الساحة العالمية من تغيير في أنماط المجتمع في عدة جوانب ومن أهمها الحياة الوظيفية والعملية للفرد.
+                        وكذلك نوعية وطبيعة الوظائف التي أصبحت متاحة في العديد من الشركات والهيئات واستغلال الثورة التكنولوجية وتطويعها لخدمة الموظف والشركة من خلال تغيير النمط والأسلوب الوظيفي بشكل عام، وآلية ممارسة العمل والمهام والوظيفية للموظفين في الشركات والمؤسسات.
+                        وكذلك أن من أهم تجليات العولمة والثورة التكنولوجية الحالية أن ما كان يعد من قبيل السياسات والإجراءات الداخلية أصبحت له أثاره وأبعاده الخارجية ، وأن ما كان يعد من قبيل السياسات والإجراءات الخارجية أصبحت له أثاره وأبعاده الداخلية.
+
+                    </p>
+                    <!--div class="row g-5 pt-2 mb-5">
+                            <div class="col-sm-6">
+                                <img class="img-fluid mb-4" src="{{ asset('public/portal/img/icon/icon-5.png')}}" alt="">
+                                <h5 class="mb-3">ادارة خدمات</h5>
+                                <span>نقود التغيير للفرد، للمجتمع، للاقتصاد.
+                                    نبتكر الحلول بمحاكاة التحديات التي يواجهها الفرد والمجتمع والشركـات</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="img-fluid mb-4" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="">
+                                <h5 class="mb-3">خبراء متخصصون</h5>
+                                <span>نقود التغيير للفرد، للمجتمع، للاقتصاد.
+                                    نبتكر الحلول بمحاكاة التحديات التي يواجهها الفرد والمجتمع والشركـات</span>
+                            </div>
+                        </div-->
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="{{ URL :: to ('/')}}">المزيد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Video Modal Start -->
+<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 16:9 aspect ratio -->
+                <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Modal End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium text-primary">خدماتنا</p>
+            <h3 class="display-5 mb-5"> خدمات  الشركه</h3>
+        </div>
+        <div class="row g-4">
+
+
+           
+            
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">          خدمات  التوظيف عن بعد   </h5>
+                            <p class="mb-0">
+                            من أكبر التحديات التي تواجه الشركات في حال طلب موظفين بنظام العمل عن بُعد هو عملية الاختيار والتعيين
+                            </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">   الخدمات المالية والإدارية </h5>
+                            <p class="mb-0">
+                            تقدم شركة الأنظمة الشاملة باقة مميزة من الخدمات المالية 
+                            </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">     خدمات الاستشارات المالية والإدارية  </h4>
+                            <p class="mb-0">
+                            </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">        خدمات التسويق الإلكتروني  </h4>
+                            <p class="mb-0">
+                            </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">          خدمات التسويق الهاتفي  </h4>
+                            <p class="mb-0">
+                            </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item position-relative h-100">
+                    <div class="service-text rounded p-5">
+                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="{{ asset('public/portal/img/icon/icon-2.png')}}" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">          خدمات مركز الاتصالات   </h4>
+                            <p class="mb-0">
+                            </p>
+                    </div>
+                    <div class="service-btn rounded-0 rounded-bottom">
+                        <a class="text-primary fw-medium" href="#">تصفح المزيد<i class="bi bi-chevron-double-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Project Start -->
+<!--div class="container-xxl pt-5">
     <div class="container">
 
-      <div class="section-title" data-aos="fade-up">
-        <h2>   {{__('site.jehat_platform')}}</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mb-30">
-          <div class="icon-box h-100" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4 class="title"><a href="">الموارد البشرية </a></h4>
-            <p class="description">
-              تقدم المنصه تقارير واحصائيات
-              متعددة قابله للعرض
-              وايضا للطباعة</p>
-          </div>
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium text-primary">مشاريعنا</p>
+            <h1 class="display-5 mb-5">لقد أنجزنا الكثير من المشاريع الرائعة</h1>
         </div>
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mb-30">
-          <div class="icon-box h-100" data-aos="fade-up" data-aos-delay="200">
-            <div class="text-center">
-              <img src="{{ asset('public/web-assets/img/icon/pi1.png')}}" alt="">
-            </div>
-            <br>
-            <h4 class="title"><a href="">الفواتير</a></h4>
-            <p class="description">تقدم المنصه تقارير واحصائيات
-              متعددة قابله للعرض
-              وايضا للطباعة</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mb-30">
-          <div class="icon-box h-100" data-aos="fade-up" data-aos-delay="300">
-            <div class="text-center">
-              <img src="{{ asset('public/web-assets/img/icon/ed1.png')}} " alt="">
-            </div>
-            <br>
-            <h4 class="title"><a href="">المحررات </a></h4>
-            <p class="description">تقدم المنصه تقارير واحصائيات
-              متعددة قابله للعرض
-              وايضا للطباعة</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mb-30">
-          <div class="icon-box h-100" data-aos="fade-up" data-aos-delay="400">
-            <div class="text-center">
-              <img src=" {{ asset('public/web-assets/img/icon/me1.png')}} " alt="">
-            </div>
-            <br>
-            <h4 class="title"><a href="">الأجتماعات </a></h4>
-            <p class="description">تقدم المنصه تقارير واحصائيات
-              متعددة قابله للعرض
-              وايضا للطباعة</p>
-          </div>
-        </div>
-        
-        </div>
-      </div>
-
-    </div-->
-  </section>
-  <!------------------------------->
-  <section class="section">
-    <div class="brand-area">
-      <div class="container">
-
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-12" data-aos="fade-up">
-            <h2 class="section-heading">@lang('site.des_2')</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 overflow">
-            <div class="brand-active brand-border pt-20">
-              <div class="single-brand">
-                <img src=" {{ asset('public/web-assets/img/gallery/brand1.png')}}" alt="">
-              </div>
-              <div class="single-brand">
-                <img src=" {{ asset('public/web-assets/img/gallery/brand2.png')}}  " alt="">
-              </div>
-              <div class="single-brand">
-                <img src=" {{ asset('public/web-assets/img/gallery/brand3.png')}} " alt="">
-              </div>
-              <div class="single-brand">
-                <img src="{{ asset('public/web-assets/img/gallery/brand4.png')}} " alt="">
-              </div>
-              <div class="single-brand">
-                <img src=" {{ asset('public/web-assets/img/gallery/brand5.png')}} " alt="">
-              </div>
-              <div class="single-brand">
-                <img src=" {{ asset('public/web-assets/img/gallery/brand6.png')}} " alt="">
-              </div>
-
-            </div>
-          </div>
-        </div>
+        <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
 
 
-      </div>
-    </div>
-  </section>
-</div>
-<!-- Our Services End -->
-<!--? About Area  -->
-<section class="about-area2 section-padding40 bg-contain-sections">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 my-0">
-        <div class="about-caption mb-50">
-          <div class="about-icon">
-            <img src=" {{ asset('public/web-assets/img/icon/about.svg')}}" alt="">
-          </div>
-          <!-- Section Tittle -->
-          <div class="section-tittle mb-25">
-            <h2>@lang('site.jehat_platform')</h2>
-          </div>
-          <p class="mb-20">
-          @lang('site.des_3')
-          </p>
-          <a href="https://app.jehat.sa/client_register.aspx" class="all-btn"><button type="button" class="btn btn-outline-secondary  pt-8 btn-sm">@lang('site.signin') </button></a>
-
-        </div>
-      </div>
-
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 my-0">
-        <div class="ratio ratio-16x9 text-center mt-4 mb-4 ">
-        <video class="embed-responsive-item" 
-          src="{{ asset('public/web-assets/img/jehat 2.mp4')}}" controls
-          style="max-width: 100%;height: 100%;" allowfullscreen>
-        </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- About Area End -->
-
-<!--? Testimonial Area Start -->
-<section class="testimonial-area fix">
-  <div class="container">
-
-    <!-- Section Tittle -->
-    <div class="row text-center">
-      <div class="col-12" data-aos="fade-up">
-        <h2 class="section-heading">  @lang('site.des_4')</h2>
-      </div>
-      <div class="col-12">
-        <div class="testimonial-wrapper section-bg2 pt-15">
-          <div class="row align-items-center justify-content-center">
-            <div class=" col-lg-8 col-md-12 col-sm-9">
-              <div class="about-caption">
-                <!-- Testimonial Start -->
-                <div class="h1-testimonial-active dot-style">
-                  <!-- Single Testimonial -->
-                  <div class="single-testimonial text-center">
-                    <div class="testimonial-caption">
-                      <img src=" {{ asset('public/web-assets/img/icon/mm.png')}} " alt="" class="quotes-sign">
+            @foreach($ProjectsData as $data)
+            <div class="project-item mb-5">
+                <div class="position-relative">
+                    <img class="img-fluid" src="{{ URL ::to ('public/upload/'.$data->image)}}" alt="">
+                    <div class="project-overlay">
+                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ URL ::to ('public/upload/'.$data->image)}}" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i class="fa fa-link"></i></a>
                     </div>
-                    <!-- founder -->
-                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                      <div class="founder-text">
-
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Single Testimonial -->
-                  <div class="single-testimonial text-center">
-                    <div class="testimonial-caption">
-                      <img src="{{ asset('public/web-assets/img/icon/quotes-sign.png')}}" alt="" class="quotes-sign">
-                    </div>
-                    <!-- founder -->
-                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                      <div class="founder-text">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="single-testimonial text-center">
-                    <div class="testimonial-caption">
-                      <img src="{{ asset('public/web-assets/img/icon/mn.png')}} " alt="" class="quotes-sign">
-                    </div>
-                    <!-- founder -->
-                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                      <div class="founder-text">
-                      </div>
-                    </div>
-                  </div>
                 </div>
-
-                <!-- Testimonial End -->
-              </div>
+                <div class="p-4">
+                    <a class="d-block h5" href="#"> {{ $data->name_ar}}</a>
+                    <span>{{$data->desc_ar}}</span>
+                </div>
             </div>
-          </div>
+
+            @endforeach
+
         </div>
-      </div>
     </div>
-  </div>
-</section>
-<!--? Testimonial Area End -->
+</div-->
+<!-- Project End -->
+<!-- Quote Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-5 fw-medium text-primary">المساعدة</p>
+                <h1 class="display-5 mb-4">هل تحتاج اذا مساعدة خبيرنا ؟ </h1>
+
+                <p>نمتلك فريق تسويقي مبدع، ونستخدم أنسب الاستراتيجيات التسويقية لكل حدث، بجانب أحدث الوسائل والتقنيات العالمية للاتصال بالشرائح المستهدفة؛ وذلك بتطبيق حزمة من الإجراءات التسويقية المترابطة التي تحقق الوصول الكامل للمستهدفات، ومزيداً من الزخم الإعلامي لفعاليات أعمالنا.</p>
+                <p class="mb-4">نمتلك فريق تسويقي مبدع، ونستخدم أنسب الاستراتيجيات التسويقية لكل حدث، بجانب أحدث الوسائل والتقنيات العالمية للاتصال بالشرائح المستهدفة؛ وذلك بتطبيق حزمة من الإجراءات التسويقية المترابطة التي تحقق الوصول الكامل للمستهدفات، ومزيداً من الزخم الإعلامي لفعاليات أعمالنا.</p>
+                <a class="d-inline-flex align-items-center rounded overflow-hidden border border-primary" href="">
+                    <span class="btn-lg-square bg-primary" style="width: 55px; height: 55px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </span>
+                    <span class="fs-5 fw-medium mx-4">{{$settingData->phone}}</span>
+                </a>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <h2 class="mb-4">بيانات المساعدة</h2>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            <label for="name">الاسم</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="mail" placeholder="Your Email">
+                            <label for="mail">البريد الالكتروني</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="mobile" placeholder="Your Mobile">
+                            <label for="mobile">رقم الجوال</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating">
+                            <select class="form-select" id="service">
+                                <option selected>التسويق الرقمي</option>
+                                <option value="">التسويق الإجتماعي</option>
+                                <option value="">تسويق المحتوى</option>
+                                <option value="">التسويق عبر البريد الإلكتروني</option>
+                            </select>
+                            <label for="service">اختر الخدمة</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 130px"></textarea>
+                            <label for="message">ادخل الرسالة</label>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary w-100 py-3" type="submit">ارسال</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Quote Start -->
+
+
+<!-- Team Start -->
+<!--div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium text-primary">فريق العمل</p>
+            <h1 class="display-5 mb-5">الخبراء لدينا على استعداد لمساعدتك</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item rounded overflow-hidden pb-4">
+                    <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
+                    <h5>Alex Robin</h5>
+                    <span class="text-primary">Founder & CEO</span>
+                    <ul class="team-social">
+                        <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item rounded overflow-hidden pb-4">
+                    <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
+                    <h5>Adam Crew</h5>
+                    <span class="text-primary">Co Founder</span>
+                    <ul class="team-social">
+                        <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item rounded overflow-hidden pb-4">
+                    <img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
+                    <h5>Boris Johnson</h5>
+                    <span class="text-primary">Executive Manager</span>
+                    <ul class="team-social">
+                        <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item rounded overflow-hidden pb-4">
+                    <img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
+                    <h5>Robert Jordan</h5>
+                    <span class="text-primary">Digital Marketer</span>
+                    <ul class="team-social">
+                        <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div-->
+<!-- Team End -->
+
+
+<!-- Testimonial Start -->
+<!--div class="container-xxl pt-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-medium text-primary">اراء العملاء</p>
+            <h1 class="display-5 mb-5">ماذا يقول العملاء عن خدماتنا</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                <img class="mb-4" src="img/testimonial-3.jpg" alt="">
+                <p class="mb-4">
+                    أتقدم بالشكر الجزيل الى مجموعة حلول الاعمال على التميز في 2030. أرجو لكم التوفيق والسداد ونلتقي بكم في مزيد من النجاحات<br></br></p>
+                <h5>اسم العميل</h5>
+                <span class="text-primary">ساره</span>
+            </div>
+            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                <img class="mb-4" src="img/testimonial-2.jpg" alt="">
+                <p class="mb-4"> أتقدم بالشكر الجزيل الى مجموعة حلول الاعمال على التميز في 2030. أرجو لكم التوفيق والسداد ونلتقي بكم في مزيد من النجاحات<br></br></p>
+                <h5>اسم العميل</h5>
+                <span class="text-primary">سعيد</span>
+            </div>
+            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                <img class="mb-4" src="img/testimonial-3.jpg" alt="">
+                <p class="mb-4"> أتقدم بالشكر الجزيل الى مجموعة حلول الاعمال على التميز في 2030. أرجو لكم التوفيق والسداد ونلتقي بكم في مزيد من النجاحات<br></br></p>
+                <h5>اسم العميل</h5>
+                <span class="text-primary">عبد العزيز</span>
+            </div>
+            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                <img class="mb-4" src="img/testimonial-2.jpg" alt="">
+                <p class="mb-4"> أتقدم بالشكر الجزيل الى مجموعة حلول الاعمال على التميز في 2030. أرجو لكم التوفيق والسداد ونلتقي بكم في مزيد من النجاحات<br></br></p>
+                <h5>اسم العميل</h5>
+                <span class="text-primary">فاطمة</span>
+            </div>
+        </div>
+    </div>
+</div-->
+<!-- Testimonial End -->
+
+
 
 
 

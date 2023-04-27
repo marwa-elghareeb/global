@@ -144,7 +144,7 @@
 
                                 <div style="float: right;">
                                     <button type="submit" class="btn btn-primary btn-form">Submit</button>
-                                    <button type="reset"  class="btn btn-light btn-form"><a href="{{ route('pages.index') }}">Cancel</a></button>
+                                    <button type="reset" class="btn btn-light btn-form">Cancel</button>
                                 </div>
                             </form>
                         </div>
